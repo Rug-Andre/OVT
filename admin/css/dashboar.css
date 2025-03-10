@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(images/images6.jpg);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Navigation */
+.navbar {
+    background: rgb(229, 252, 236);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: rgb(199, 166, 20);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-item a {
+    color: rgb(199, 166, 20);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: rgb(169, 219, 52);
+}
+
+/* Main Content */
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 3rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+    position: relative;
+}
+
+.user_img {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.user_img:hover {
+    transform: scale(1.05);
+}
+
+.user_img input[type="file"] {
+    display: none;
+}
+
+.message {
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.message.success {
+    color: green;
+    background-color: #e6ffe6;
+}
+
+.message.error {
+    color: red;
+    background-color: #ffe6e6;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: rgb(63, 187, 100);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary {
+    background: #3498db;
+}
+
+.btn-secondary {
+    background: rgb(201, 170, 34);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background: #2980b9; /* Darker shade for primary */
+}
+
+.btn-secondary:hover {
+    background: #95a5a6; /* Lighter shade for secondary */
+}
+
+/* Features Section */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: rgb(63, 187, 100);
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: rgb(63, 187, 100);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 2rem;
+        margin-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    .user_img {
+        width: 100px;
+        height: 100px;
+    }
+}

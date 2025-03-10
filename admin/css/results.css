@@ -1,0 +1,139 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1300px; /* Increased to accommodate 1200px table */
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.table {
+    width: 1200px; /* Fixed width as requested */
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto; /* Center the table */
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+    vertical-align: middle; /* Center content vertically */
+}
+
+/* Set minimum widths for columns to ensure content visibility */
+.table th:nth-child(1), .table td:nth-child(1) { /* Candidate ID */
+    min-width: 100px;
+}
+.table th:nth-child(2), .table td:nth-child(2) { /* Election ID */
+    min-width: 100px;
+}
+.table th:nth-child(3), .table td:nth-child(3) { /* Candidate */
+    min-width: 150px;
+}
+.table th:nth-child(4), .table td:nth-child(4) { /* Position */
+    min-width: 120px;
+}
+.table th:nth-child(5), .table td:nth-child(5) { /* Candidate Info */
+    min-width: 200px;
+    word-break: break-word; /* Ensure long text wraps */
+}
+.table th:nth-child(6), .table td:nth-child(6) { /* Image */
+    min-width: 120px;
+    text-align: center; /* Center the image */
+}
+.table th:nth-child(7), .table td:nth-child(7) { /* Votes */
+    min-width: 80px;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table-dark {
+    background-color: #212529;
+    color: white;
+}
+
+.election-header {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.election-header h3 {
+    margin: 0 0 5px 0;
+    color: #007bff;
+}
+
+.election-header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.candidate-image {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}

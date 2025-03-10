@@ -1,0 +1,169 @@
+body {
+    background-color: #f8f9fa;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 0 15px;
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: rgba(223, 135, 3, 0.78);
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Table Styling */
+.table {
+    margin-top: 30px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 3px solid #0056b3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: middle;
+}
+
+/* Zebra striping for better readability */
+.table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Hover effect with slight color change */
+.table tbody tr:hover {
+    background-color: #e9f1ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Candidate image styling */
+.candidate-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.candidate-image:hover {
+    transform: scale(1.1);
+}
+
+/* Vote date styling */
+.vote-date {
+    color: #e67e22;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* No records styling */
+.no-records {
+    color: #6c757d;
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 30px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+/* Button styling */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .table {
+        margin-top: 20px;
+    }
+
+    .table th {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+
+    .table td {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+
+    .candidate-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .vote-date {
+        font-size: 0.85rem;
+    }
+
+    .btn-secondary {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    .no-records {
+        font-size: 1rem;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Runner Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            display: flex;
+        }
+
+      
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .header h1 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .header .status {
+            background-color: #2ecc71;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .header .date {
+            font-size: 14px;
+        }
+
+        .overview {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .overview .status-message {
+            background-color: #2ecc71;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Charts Section */
+        .charts {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .chart-container {
+            width: 60%;
+        }
+
+        .votes-container {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .vote-count {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .vote-count.red {
+            color: #e74c3c;
+        }
+
+        .vote-count.green {
+            color: #2ecc71;
+        }
+
+        .vote-label {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Mr. and Mrs. MHS Election</h1>
+            <div>
+                <span class="status">Completed</span>
+                <span class="date">11/30 - 12/22</span>
+            </div>
+        </div>
+
+        <div class="overview">
+            <h2>Overview</h2>
+            <div class="status-message">
+                Your election ended on Dec 22, 2015 12:00 AM
+            </div>
+
+            <div class="charts">
+                <div class="chart-container">
+                    <h3>Votes by Day</h3>
+                    <canvas id="votesByDayChart"></canvas>
+                </div>
+                <div class="votes-container">
+                    <h3>Vice President</h3>
+                    <canvas id="vicePresidentChart" width="200" height="200"></canvas>
+                    <div class="vote-count red">42</div>
+                    <div class="vote-label">VOTES</div>
+                    <div class="vote-count green">46</div>
+                    <div class="vote-label">VOTERS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Votes by Day Line Chart
+        const votesByDayCtx = document.getElementById('votesByDayChart').getContext('2d');
+        new Chart(votesByDayCtx, {
+            type: 'line',
+            data: {
+                labels: ['11/27', '11/28', '11/29', '11/30', '12/01'],
+                datasets: [{
+                    label: 'Votes',
+                    data: [30, 20, 10, 5, 5],
+                    borderColor: '#3498db',
+                    fill: false,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 40
+                    }
+                }
+            }
+        });
+
+        // Vice President Donut Chart
+        const vicePresidentCtx = document.getElementById('vicePresidentChart').getContext('2d');
+        new Chart(vicePresidentCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Bryant Williams (10)', 'Stephen Schumacher (7)', 'Atta Stewart (7)', 'Ryder Stewart (6)', 'Jeremy Stewart (5)'],
+                datasets: [{
+                    data: [10, 7, 7, 6, 5],
+                    backgroundColor: ['#3498db', '#e74c3c', '#f1c40f', '#9b59b6', '#7f8c8d']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

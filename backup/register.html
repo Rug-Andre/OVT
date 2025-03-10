@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Register - OVT</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <main class="register-container">
+        <section class="form-wrapper">
+            <h1 class="form-title"><i class="fas fa-user-plus"></i> ADMIN REGISTER</h1>
+          
+            <form method="POST" class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="username" class="form-label"><i class="fas fa-user"></i> Username</label>
+                    <input type="text" 
+                           name="username" 
+                           id="username" 
+                           class="form-input" 
+                        
+                           required 
+                           aria-required="true"
+                           placeholder="Enter your username">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" 
+                           name="email" 
+                           id="email" 
+                           class="form-input" 
+                       
+                           required 
+                           aria-required="true"
+                           placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label"><i class="fas fa-lock"></i> Password</label>
+                    <input type="password" 
+                           name="password" 
+                           id="password" 
+                           class="form-input" 
+                           required 
+                           aria-required="true"
+                           placeholder="Create a password">
+                </div>
+
+                <div class="form-group terms-group">
+                    <input type="checkbox" 
+                           name="terms" 
+                           id="terms" 
+                           class="terms-checkbox" 
+                           required 
+                           aria-required="true"
+                         >
+                    <label for="terms" class="terms-label">
+                        <i class="fas fa-check-square"></i> I agree to <a href="terms.php"> terms </a> and objectives of OVT!
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn" aria-label="Register"><i class="fas fa-user-plus"></i> Register</button>
+            </form>
+            <p class="auth-link">
+                <i class="fas fa-sign-in-alt"></i> Already have an account? <a href="login.php" class="link">Login</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>

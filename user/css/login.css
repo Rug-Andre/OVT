@@ -1,0 +1,222 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Properties */
+:root {
+    --primary-color: #0df393;
+    --secondary-color: #128043;
+    --accent-color: #ec8267;
+    --error-color: #f04d4d;
+    --background-light: #ffffff;
+    --text-dark: #f00505fd;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Base Layout */
+body {
+    background-image: url(https://www.societybyte.swiss/wp-content/uploads/2018/08/Evoting_Vektorgrafik_ret-1030x730.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+/* Container */
+.login-container {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px #2903b3;
+    border-radius: 10px;
+   
+}
+
+/* Form Wrapper */
+.form-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    backdrop-filter: blur(8px);
+    transition: var(--transition);
+}
+
+.form-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(4, 1, 179, 0.2);
+}
+
+/* Typography */
+.form-title {
+    color: #172497; /* Green title */
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Form Elements */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form-label {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5rem;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    background: #f0f4f8;
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(28, 13, 243, 0.2);
+}
+
+.form-input::placeholder {
+    color: #999;
+    opacity: 0.7;
+}
+
+/* Checkbox Styles (for consistency, though not used in login) */
+.terms-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.terms-checkbox {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--accent-color);
+    cursor: pointer;
+    transition: var(--transition);
+    margin: 0;
+}
+
+.terms-checkbox:hover {
+    transform: scale(1.1);
+}
+
+.terms-label {
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    line-height: 1;
+    margin: 0;
+    display: inline;
+}
+
+/* Button */
+.submit-btn {
+    background:#2903b3;
+    color: white;
+    padding: 0.5rem;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.submit-btn:hover {
+    background: #451ae0;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Alerts */
+.alert {
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background: rgba(13, 243, 147, 0.15);
+    color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.alert-error {
+    background: rgba(240, 77, 77, 0.15);
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
+
+/* Auth Link */
+.auth-link {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #2903b3;
+    font-size: 0.8rem;
+}
+
+.link {
+    color: #2903b3;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.link:hover {
+    color: #4d2acc;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-wrapper {
+        padding: 1rem;
+    }
+    
+    .form-title {
+        font-size: 1.25rem;
+    }
+    
+    .form-input,
+    .submit-btn {
+        height: 35px;
+    }
+    
+    .submit-btn {
+        font-size: 0.9rem;
+    }
+}
+

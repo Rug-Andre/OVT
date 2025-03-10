@@ -1,0 +1,287 @@
+body {
+    background-color: #f8f9fa;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 15px;
+    background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgba(223, 135, 3, 0.78);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Form */
+.search-form {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.search-form input {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 300px;
+    max-width: 100%;
+}
+
+.search-form button, .search-form a {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-search {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.btn-search:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.btn-clear {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-clear:hover {
+    background-color: #b02a37;
+    transform: scale(1.02);
+}
+
+/* Table Styles */
+.users-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+th a {
+    color: white;
+    text-decoration: none;
+}
+
+th a:hover {
+    text-decoration: underline;
+}
+
+.sort-icon {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+td {
+    font-size: 1rem;
+    color: #333;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e9f1ff;
+    transition: background-color 0.3s ease;
+}
+
+.no-users {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 6px 12px; /* Reduced button size */
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-update {
+    background-color: #28a745;
+    color: white;
+    margin-right: 5px;
+}
+
+.btn-update:hover {
+    background-color: #218838;
+    transform: scale(1.02);
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #b02a37;
+    transform: scale(1.02);
+}
+
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn-prev, .btn-next, .btn-page {
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-prev, .btn-next {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-prev:hover, .btn-next:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.btn-page {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-page:hover {
+    background-color: #5a6268;
+    transform: scale(1.02);
+}
+
+.btn-page.active {
+    background-color: #007bff;
+    font-weight: bold;
+}
+
+.pagination p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Back Button */
+.btn-back {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #6c757d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-form input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .btn {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+
+    .btn-prev, .btn-next, .btn-page {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+
+    .btn-back {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}

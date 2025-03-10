@@ -1,0 +1,60 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Properties */
+:root {
+    --primary-color: #0df393;
+    --secondary-color: #128043;
+    --accent-color: #ec8267;
+    --error-color: #f04d4d;
+    --background-light: #ffffff;
+    --text-dark: #ddaa03;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Base Layout */
+body {
+    background: url('../image1.jpg') no-repeat center center fixed; /* Added background image */
+    background-size: cover; /* Ensures image covers entire body */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Rest of your CSS remains the same */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ... (all other existing CSS rules remain unchanged) ... */
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .form-wrapper {
+        padding: 1rem;
+    }
+    
+    .form-title {
+        font-size: 1.25rem;
+    }
+    
+    .form-input,
+    .submit-btn {
+        height: 35px;
+    }
+    
+    .submit-btn {
+        font-size: 0.9rem;
+    }
+}

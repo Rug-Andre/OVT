@@ -1,0 +1,176 @@
+:root {
+    /* Define custom properties for scalability */
+    --spacing-unit: 1rem;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --container-max-width: 1000px;
+    --transition-speed: 0.3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: calc(var(--spacing-unit) * 0.5);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    width: 100%;
+    margin: calc(var(--spacing-unit) * 3) auto;
+    padding: 0 calc(var(--spacing-unit) * 0.9375);
+    background-color: #fff;
+    padding-left:60px;
+    padding-right: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-speed) ease;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    padding-top: 30px;
+    color:rgb(209, 157, 15);
+    margin-bottom: calc(var(--spacing-unit) * 1.25);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.alert-info {
+    padding: var(--spacing-unit);
+    margin-bottom: calc(var(--spacing-unit) * 1.25);
+    border-radius: 4px;
+    background-color: #cce5ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: calc(var(--spacing-unit) * 0.9375);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: calc(var(--spacing-unit) * 0.3125);
+    font-weight: bold;
+    color: rgb(58, 133, 52);
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.form-control {
+    width: 100%;
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 2);
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    transition: border-color var(--transition-speed) ease, 
+               box-shadow var(--transition-speed) ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0,123,255,0.3);
+}
+
+.form-control::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+.form-icon {
+position: absolute;
+left: 97%; /* Relative to the parent container, adjusts to screen width */
+top: 60px; /* Centers vertically within the parent, adjust as needed */
+transform: translate(-50%, -50%); /* Centers the icon both horizontally and vertically */
+color: rgb(204, 167, 2);
+}
+.btn {
+    display: inline-block;
+    padding: calc(var(--spacing-unit) * 0.625) calc(var(--spacing-unit) * 1.25);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    transition: background-color var(--transition-speed) ease,
+               transform var(--transition-speed) ease;
+    position: relative;
+    padding-left: calc(var(--spacing-unit) * 2.5);
+}
+
+.btn i {
+    margin-left: 8px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    margin-top: calc(var(--spacing-unit) * 0.9375);
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: calc(var(--spacing-unit) * 1.5) auto;
+        padding: calc(var(--spacing-unit) * 0.75);
+    }
+
+    .btn {
+        padding: calc(var(--spacing-unit) * 0.5) var(--spacing-unit);
+    }
+    .form-icon {
+position: absolute;
+left: 94%; /* Relative to the parent container, adjusts to screen width */
+top: 60px; /* Centers vertically within the parent, adjust as needed */
+transform: translate(-50%, -50%); /* Centers the icon both horizontally and vertically */
+color: rgb(204, 167, 2);
+}
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: var(--spacing-unit) auto;
+        padding: calc(var(--spacing-unit) * 0.5);
+    }
+.form-icon {
+position: absolute;
+left: 94%; /* Relative to the parent container, adjusts to screen width */
+top: 60px; /* Centers vertically within the parent, adjust as needed */
+transform: translate(-50%, -50%); /* Centers the icon both horizontally and vertically */
+color: rgb(204, 167, 2);
+}
+    h2 {
+        margin-bottom: var(--spacing-unit);
+    }
+}

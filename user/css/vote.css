@@ -1,0 +1,71 @@
+body {
+    background-color: #f8f9fa;
+}
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.election-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+    background: #6c757d;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+.back-button:hover {
+    background: #5a6268;
+}
+.text-success{
+    padding-top: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.candidate-image {
+    width: 100%; /* Fixed width for consistency */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto 10px; /* Center and add spacing */
+    object-fit: contain; /* Ensure image scales properly */
+}
+.candidate-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.vote-button {
+    background-color:#ddaa03;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.vote-button:hover {
+    background-color: #ddaa07;
+}
+
+
+
+
+
+
+
