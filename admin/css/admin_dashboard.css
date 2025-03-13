@@ -109,7 +109,7 @@ html, body {
 }
 .sidebar ul li {
     padding: 10px;
-    border-bottom: 1px solid rgb(221, 238, 255);
+    /* border-bottom: 1px solid rgb(221, 238, 255); */
     transition: background-color 0.3s ease;
 }
 .sidebar ul li a {
@@ -124,7 +124,7 @@ html, body {
     font-weight: 500;
 }
 .sidebar ul li a:hover {
-    background: linear-gradient(90deg, #00b894, #00d4b4);
+    background: linear-gradient(90deg, #0031b8, #1b0275);
     color: #fff;
     transform: translateX(15px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -162,7 +162,7 @@ html, body {
     font-weight: bold;
 }
 h1 {
-    color: rgb(230, 175, 24);
+    color: rgb(8, 62, 211);
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: bold;
@@ -220,7 +220,7 @@ h1 {
 
 .card:nth-child(1) h3 i,
 .card:nth-child(1) p {
-    color: #3498db;
+    color: #0a1dca;
 }
 .card:nth-child(1) {
     box-shadow: 0 4px 8px rgba(52, 152, 219, 0.5);
@@ -241,10 +241,10 @@ h1 {
 }
 .card:nth-child(4) h3 i,
 .card:nth-child(4) p {
-    color: #f1c40f;
+    color: #0f78f1;
 }
 .card:nth-child(4) {
-    box-shadow: 0 4px 8px rgba(241, 196, 15, 0.5);
+    box-shadow: 0 4px 8px rgba(56, 15, 241, 0.5);
 }
 
 .card:hover {
@@ -318,7 +318,7 @@ h1 {
 
 /* Button Styling */
 .btn-primary {
-    background-color: #007bff;
+    background-color: #0719b9;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -327,7 +327,7 @@ h1 {
     margin-right: 10px;
 }
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #0021b3;
 }
 
 /* Disable background interaction */
@@ -354,7 +354,7 @@ body.overlay-active {
 
 .card p {
     font-size: 24px;
-    color: #2980b9;
+    color: #3329b9;
     font-weight: bold;
     margin-top: 10px;
 }
@@ -368,7 +368,7 @@ body.overlay-active {
 }
 .tasks i {
     font-size: 40px;
-    color: rgb(255, 25, 0);
+    color: rgb(0, 38, 255);
     padding-right: 40px;
 }
 
@@ -407,14 +407,14 @@ body.overlay-active {
     font-size: 24px;
     margin-bottom: 10px;
 }
-.grid-item:nth-child(1) i { color: #ff00ff; }
-.grid-item:nth-child(2) i { color: #00ff00; }
-.grid-item:nth-child(3) i { color: #000000; }
-.grid-item:nth-child(4) i { color: #ff00ff; }
-.grid-item:nth-child(5) i { color: #00ffff; }
-.grid-item:nth-child(6) i { color: #ffff00; }
+.grid-item:nth-child(1) i { color: #040ea1; }
+.grid-item:nth-child(2) i { color: #0059ff; }
+.grid-item:nth-child(3) i { color: #dd0505; }
+.grid-item:nth-child(4) i { color: #ffff00 }
+.grid-item:nth-child(5) i { color: #542bb3; }
+.grid-item:nth-child(6) i { color: #9900ff; }
 .grid-item:nth-child(7) i { color: #0000ff; }
-.grid-item:nth-child(8) i { color: #ff8000; }
+.grid-item:nth-child(8) i { color: #0d5723; }
 .grid-item:nth-child(9) i { color: #ff0000; }
 
 .footer {
